@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Pro</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <header>
+      <h1>💰 Finance Pro</h1>
+      <button id="themeBtn">🌙</button>
+    </header>
+
+    <section class="card balance">
+      <h2>Saldo Totale</h2>
+      <p id="balance">€0.00</p>
+    </section>
+
+    <section class="card">
+      <canvas id="chart"></canvas>
+    </section>
+
+    <section class="card form">
+
+      <input id="desc" type="text" placeholder="Descrizione">
+      <input id="amount" type="number" placeholder="Importo">
+
+      <select id="type">
+        <option value="income">Entrata</option>
+        <option value="expense">Uscita</option>
+      </select>
+
+      <select id="category">
+        <option>Cibo</option>
+        <option>Trasporti</option>
+        <option>Shopping</option>
+        <option>Bollette</option>
+        <option>Altro</option>
+      </select>
+
+      <button onclick="addTransaction()">➕ Aggiungi</button>
+
+    </section>
+
+    <section class="card">
+      <h2>Transazioni</h2>
+      <ul id="list"></ul>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
